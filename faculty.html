@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Faculty Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container dashboard">
+    <header>
+      <h2>Faculty Dashboard</h2>
+      <button onclick="logout()">Logout</button>
+    </header>
+
+    <section class="records">
+      <h3>All Student Records</h3>
+      <table id="facultyTable">
+        <thead>
+          <tr>
+            <th>Student Name</th>
+            <th>Semester</th>
+            <th>Subject</th>
+            <th>Marks</th>
+            <th>Attendance</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    loadFaculty();
+  </script>
+</body>
+</html>
