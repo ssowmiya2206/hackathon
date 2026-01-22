@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container dashboard">
+    <header>
+      <h2>Student Dashboard</h2>
+      <button onclick="logout()">Logout</button>
+    </header>
+
+    <section class="cards">
+      <div class="card">
+        <h3>Marks Overview</h3>
+        <canvas id="marksChart" width="400" height="200"></canvas>
+      </div>
+      <div class="card">
+        <h3>Attendance</h3>
+        <div id="attendanceContainer">
+          <div class="circle">
+            <div class="mask full" id="maskFull"></div>
+            <div class="mask half" id="maskHalf"></div>
+            <div class="inside-circle" id="attendancePercent">0%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="records">
+      <h3>Semester-wise Details</h3>
+      <table id="recordsTable">
+        <thead>
+          <tr>
+            <th>Semester</th>
+            <th>Subject</th>
+            <th>Marks</th>
+            <th>Attendance</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    loadStudent();
+  </script>
+</body>
+</html>
